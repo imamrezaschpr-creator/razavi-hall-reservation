@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سامانه درخواست رزرو سالن | بنیاد فرهنگی رضوی</title>
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f4f6fb,#101827);--surface:light-dark(#fff,#182235);--surface2:light-dark(#f8faff,#202d43);--text:light-dark(#17243b,#edf3ff);--muted:light-dark(#697790,#a8b5ca);--line:light-dark(#e1e7f0,#344259);--blue:light-dark(#235bd6,#82a8ff);--teal:light-dark(#0d9b8b,#5ad7c4);--gold:light-dark(#d99827,#f2c56e);--red:light-dark(#d9485f,#ff8494);--shadow:0 14px 36px #14284b12}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,"Segoe UI",sans-serif;font-size:14px;line-height:1.8}.app{min-height:100vh;background:var(--bg)}.top{background:linear-gradient(120deg,#102c66,#245bd4 62%,#149b91);color:#fff;padding:25px max(22px,calc((100% - 1240px)/2));position:relative;overflow:hidden}.top:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff24;border-radius:50%;left:7%;top:-150px;box-shadow:0 0 0 28px #ffffff09,0 0 0 58px #ffffff08}.brand{display:flex;align-items:center;gap:13px;position:relative;z-index:1}.logo{width:48px;height:48px;border-radius:15px;background:#ffffff20;border:1px solid #ffffff55;display:grid;place-items:center;font-size:25px}.brand h1{font-size:20px;margin:0;font-weight:800}.brand p{margin:2px 0 0;color:#e2ebff;font-size:12px}.topline{display:flex;justify-content:space-between;align-items:center;gap:20px;position:relative;z-index:1;margin-top:25px}.topline h2{font-size:26px;margin:0 0 4px}.topline p{margin:0;color:#e1eaff}.demo{background:#fff2d8;color:#7d4e00;padding:7px 12px;border-radius:20px;font-size:11px;font-weight:bold;white-space:nowrap}.wrap{max-width:1240px;margin:0 auto;padding:24px 20px 55px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}.step{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:13px 16px;display:flex;gap:12px;align-items:center}.num{width:32px;height:32px;border-radius:11px;background:light-dark(#e8efff,#263b61);color:var(--blue);display:grid;place-items:center;font-weight:bold}.step b{display:block}.step small{color:var(--muted)}.layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:20px;align-items:start}.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:18px}.ph{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.ph h3{margin:0;font-size:16px}.ph p{margin:2px 0 0;color:var(--muted);font-size:12px}.pb{padding:20px}.fieldgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{min-width:0}.field.full{grid-column:1/-1}label{display:block;font-weight:700;font-size:12px;margin-bottom:6px}label .req{color:var(--red)}input,select,textarea{width:100%;font:inherit;font-size:13px;background:var(--surface2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px 12px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #3976ef20}textarea{resize:vertical;min-height:84px}.hint{font-size:11px;color:var(--muted);margin-top:5px}.venue-list{display:grid;gap:9px}.venue{display:flex;align-items:flex-start;gap:11px;border:1px solid var(--line);border-radius:13px;padding:12px;cursor:pointer;transition:.15s}.venue:has(input:checked){border-color:var(--blue);background:light-dark(#f1f5ff,#1d3153);box-shadow:inset 0 0 0 1px var(--blue)}.venue input{width:auto;margin-top:7px;accent-color:var(--blue)}.vicon{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:light-dark(#e9f0ff,#263a5d);font-size:20px;flex-shrink:0}.vtext{flex:1}.vtext b{display:block;font-size:13px}.vtext small{display:block;color:var(--muted);font-size:11px}.cap{font-size:11px;background:light-dark(#e5f8f3,#173f3a);color:var(--teal);border-radius:8px;padding:3px 8px;white-space:nowrap}.calendar-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}.monthname{font-size:16px;font-weight:800}.arrows{display:flex;gap:6px}.iconbtn{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:9px;width:34px;height:34px;cursor:pointer;font-size:18px}.week,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.week span{text-align:center;color:var(--muted);font-size:11px;padding:4px 0}.day{min-height:44px;border:1px solid transparent;background:var(--surface2);border-radius:10px;color:var(--text);cursor:pointer;position:relative;font:inherit;font-size:12px}.day:hover:not(:disabled){border-color:var(--blue)}.day.muted{opacity:.35}.day:disabled{opacity:.23;cursor:not-allowed}.day.selected{background:var(--blue);color:#fff;font-weight:bold}.day .dot{position:absolute;bottom:4px;left:calc(50% - 3px);width:6px;height:6px;border-radius:50%;background:var(--teal)}.day.selected .dot{background:#fff}.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:13px;font-size:11px;color:var(--muted)}.legend span{display:flex;align-items:center;gap:6px}.dotkey{width:8px;height:8px;border-radius:50%;display:inline-block}.slots{display:grid;gap:9px}.slot{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:12px;padding:11px 13px;cursor:pointer}.slot:has(input:checked){border-color:var(--blue);background:light-dark(#f1f5ff,#1d3153)}.slot input{width:auto;accent-color:var(--blue)}.slotleft{display:flex;align-items:center;gap:10px}.clock{font-size:18px}.slot b{display:block;font-size:13px}.slot small{display:block;color:var(--muted);font-size:11px}.status{font-size:10px;padding:3px 8px;border-radius:7px;background:light-dark(#def7ed,#17443b);color:var(--teal);white-space:nowrap}.status.busy{background:light-dark(#ffe5e9,#4d2630);color:var(--red)}.status.pending{background:light-dark(#fff0d3,#4b3a20);color:var(--gold)}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.check{display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:12px}.check input{width:auto;accent-color:var(--blue)}.summary{background:linear-gradient(145deg,light-dark(#f2f7ff,#1c2e4b),var(--surface));border:1px solid var(--line);border-radius:15px;padding:16px}.summary h4{margin:0 0 10px}.sumrow{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:12px}.sumrow:last-child{border:0}.sumrow span{color:var(--muted)}.notice{font-size:11px;color:var(--muted);margin:12px 0}.btn{width:100%;border:0;border-radius:12px;background:linear-gradient(110deg,#235bd6,#138f91);color:#fff;padding:13px;font:inherit;font-weight:800;cursor:pointer;box-shadow:0 8px 18px #235bd62b}.btn:hover{filter:brightness(1.07)}.btn:disabled{opacity:.5;cursor:not-allowed}.secure{display:flex;justify-content:center;gap:7px;align-items:center;color:var(--muted);font-size:10px;margin-top:10px}.success{display:none;padding:15px;border-radius:12px;background:light-dark(#e4f8ee,#163e33);border:1px solid var(--teal);margin-top:12px;color:var(--teal)}.foot{text-align:center;color:var(--muted);font-size:11px;padding:18px}.mini{font-size:11px;color:var(--muted)}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.topline{align-items:flex-start;flex-direction:column}.topline h2{font-size:22px}.steps{gap:7px}.step{padding:10px}.step small{display:none}.wrap{padding:16px 12px 35px}}@media(max-width:520px){.fieldgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.steps{grid-template-columns:1fr}.step{padding:8px 12px}.step small{display:block}.pb{padding:14px}.ph{padding:14px}.day{min-height:38px}.services{grid-template-columns:1fr}.top{padding:20px 16px}.brand h1{font-size:16px}}
+</style></head>
+<body><main class="app">
+<header class="top"><div class="brand"><div class="logo">🏛️</div><div><h1>بنیاد فرهنگی رضوی</h1><p>سامانه درخواست و مدیریت رزرو اماکن</p></div></div><div class="topline"><div><h2>درخواست رزرو سالن</h2><p>فضای مناسب برای همایش‌ها، نشست‌ها و برنامه‌های سازمانی خود انتخاب کنید.</p></div><span class="demo">نسخه نمایشی · اطلاعات رزرو نمونه است</span></div></header>
+<div class="wrap"><div class="steps"><div class="step"><span class="num">۱</span><div><b>انتخاب سالن و زمان</b><small>مشاهده تقویم و بازه‌های زمانی</small></div></div><div class="step"><span class="num">۲</span><div><b>ثبت مشخصات درخواست</b><small>اطلاعات تماس و جزئیات برنامه</small></div></div><div class="step"><span class="num">۳</span><div><b>بررسی و تأیید بنیاد</b><small>پیگیری نتیجه درخواست</small></div></div></div>
+<div class="layout"><section>
+<div class="panel"><div class="ph"><div><h3>🏢 انتخاب فضای موردنیاز</h3><p>ظرفیت و نشانی هر سالن را بررسی کنید.</p></div></div><div class="pb"><div class="venue-list" id="venueList">
+<label class="venue"><input type="radio" name="venue" value="سالن همایش دبیرستان علوم و معارف اسلامی امام رضا(ع)" data-cap="370" data-type="همایش" checked><span class="vicon">🎤</span><span class="vtext"><b>سالن همایش دبیرستان علوم و معارف اسلامی امام رضا(ع)</b><small>بلوار شهید فرامرز عباسی ۲۵، نبش چهارراه اول</small></span><span class="cap">۳۷۰ نفر</span></label>
+<label class="venue"><input type="radio" name="venue" value="سالن همایش دبیرستان دخترانه امام رضا(ع) ـ واحد ۷" data-cap="300" data-type="همایش"><span class="vicon">🎭</span><span class="vtext"><b>سالن همایش دبیرستان دخترانه امام رضا(ع) ـ واحد ۷</b><small>بلوار سجاد، بهارستان ۱۲</small></span><span class="cap">۳۰۰ نفر</span></label>
+<label class="venue"><input type="radio" name="venue" value="سالن همایش پژوهشسرای امام رضا(ع)" data-cap="300" data-type="همایش"><span class="vicon">🧑‍🏫</span><span class="vtext"><b>سالن همایش پژوهشسرای امام رضا(ع)</b><small>خواجه ربیع ۲۵</small></span><span class="cap">۳۰۰ نفر</span></label>
+<label class="venue"><input type="radio" name="venue" value="سالن کنفرانس دبیرستان علوم و معارف اسلامی امام رضا(ع)" data-cap="40" data-type="کنفرانس"><span class="vicon">👥</span><span class="vtext"><b>سالن کنفرانس دبیرستان علوم و معارف اسلامی امام رضا(ع)</b><small>بلوار شهید فرامرز عباسی ۲۵، نبش چهارراه اول</small></span><span class="cap">۴۰ نفر</span></label>
+<label class="venue"><input type="radio" name="venue" value="سالن کنفرانس بنیاد فرهنگی رضوی" data-cap="25" data-type="کنفرانس"><span class="vicon">💼</span><span class="vtext"><b>سالن کنفرانس بنیاد فرهنگی رضوی</b><small>بلوار سجاد، نبش یاسمن ۵</small></span><span class="cap">۲۵ نفر</span></label>
+</div></div></div>
+<div class="panel"><div class="ph"><div><h3>📅 انتخاب تاریخ و بازه زمانی</h3><p>روز موردنظر را انتخاب کنید؛ وضعیت‌های نمایش‌داده‌شده در این نسخه نمونه‌اند.</p></div><span class="mini" id="selectedDateLabel">تاریخی انتخاب نشده</span></div><div class="pb"><div class="calendar-head"><button class="iconbtn" id="prevMonth" aria-label="ماه قبل">›</button><div class="monthname" id="monthName"></div><button class="iconbtn" id="nextMonth" aria-label="ماه بعد">‹</button></div><div class="week"><span>ش</span><span>ی</span><span>د</span><span>س</span><span>چ</span><span>پ</span><span>ج</span></div><div class="days" id="days"></div><div class="legend"><span><i class="dotkey" style="background:var(--teal)"></i>دارای بازه قابل درخواست</span><span><i class="dotkey" style="background:var(--red)"></i>دارای رزرو نمونه</span><span>روزهای گذشته قابل انتخاب نیستند</span></div><div style="height:18px"></div><h4 style="margin:0 0 10px">بازه‌های زمانی همان روز</h4><div class="slots" id="slots"></div><p class="hint">بازه‌های سالن همایش: ۷ تا ۱۱، ۱۱ تا ۱۵ و ۱۵ تا ۱۹. درخواست نهایی پس از بررسی و تأیید بنیاد قطعی می‌شود.</p></div></div>
+<div class="panel" id="servicePanel"><div class="ph"><div><h3>✨ خدمات و امکانات درخواستی</h3><p>در صورت نیاز، خدمات جانبی را انتخاب کنید.</p></div></div><div class="pb"><div class="services"><label class="check"><input type="checkbox" name="service" value="سالن غذاخوری">🍽️ سالن غذاخوری</label><label class="check"><input type="checkbox" name="service" value="تصویربرداری از برنامه">🎥 تصویربرداری از برنامه</label><label class="check"><input type="checkbox" name="service" value="ویدئووال">🖥️ ویدئووال</label><label class="check"><input type="checkbox" name="service" value="کلاس درس">📚 کلاس درس</label><label class="check"><input type="checkbox" name="service" value="سیستم صوتی تکمیلی">🔊 سیستم صوتی تکمیلی</label><label class="check"><input type="checkbox" name="service" value="چیدمان ویژه">🪑 چیدمان ویژه</label></div><p class="hint">امکان ارائه خدمات جانبی و هزینه آن‌ها باید توسط واحد مربوطه تأیید شود.</p></div></div>
+</section><aside>
+<div class="panel"><div class="ph"><div><h3>📝 مشخصات متقاضی و برنامه</h3><p>فیلدهای ستاره‌دار الزامی هستند.</p></div></div><div class="pb"><form id="reservationForm"><div class="fieldgrid">
+<div class="field"><label>نوع متقاضی <span class="req">*</span></label><select name="applicantType" required><option value="">انتخاب کنید</option><option>واحدهای بنیاد و مدارس امام رضا(ع)</option><option>دستگاه دولتی</option><option>مؤسسه / سازمان</option><option>شرکت خصوصی</option><option>شخص حقیقی</option><option>سایر</option></select></div>
+<div class="field"><label>نام سازمان / واحد</label><input name="organization" placeholder="نام مجموعه یا واحد درخواست‌کننده"></div>
+<div class="field"><label>نام و نام خانوادگی مسئول <span class="req">*</span></label><input name="fullName" required placeholder="نام فرد پاسخ‌گو"></div>
+<div class="field"><label>شماره همراه <span class="req">*</span></label><input name="phone" required inputmode="tel" pattern="[0-9۰-۹+() -]{10,18}" placeholder="۰۹۱۵۱۲۳۴۵۶۷"></div>
+<div class="field"><label>کد ملی / شناسه ملی</label><input name="nationalId" inputmode="numeric" placeholder="برای ثبت و پیگیری درخواست"></div>
+<div class="field"><label>پست الکترونیک</label><input name="email" type="email" placeholder="name@example.com"></div>
+<div class="field"><label>عنوان برنامه <span class="req">*</span></label><input name="eventTitle" required placeholder="مثلاً نشست تخصصی یا همایش"></div>
+<div class="field"><label>نوع برنامه <span class="req">*</span></label><select name="eventType" required><option value="">انتخاب کنید</option><option>همایش</option><option>نشست / جلسه</option><option>کارگاه آموزشی</option><option>مراسم فرهنگی</option><option>جشنواره / اختتامیه</option><option>آزمون</option><option>سایر</option></select></div>
+<div class="field"><label>تعداد تقریبی شرکت‌کنندگان <span class="req">*</span></label><input name="attendees" type="number" min="1" required placeholder="تعداد نفرات"></div>
+<div class="field"><label>تاریخ جایگزین (اختیاری)</label><input name="backupDate" placeholder="در صورت عدم امکان تاریخ اصلی"></div>
+<div class="field"><label>مسئول فنی / اجرایی</label><input name="technicalContact" placeholder="نام و شماره تماس در توضیحات"></div>
+<div class="field"><label>نحوه پرداخت پیشنهادی</label><select name="payment"><option>پس از اعلام هزینه بنیاد</option><option>فاکتور رسمی</option><option>سازمانی / داخلی</option><option>سایر</option></select></div>
+<div class="field full"><label>توضیحات و نیازهای ویژه</label><textarea name="notes" placeholder="چیدمان، تجهیزات، زمان آماده‌سازی، نیازهای دسترس‌پذیری یا توضیحات دیگر"></textarea></div>
+<div class="field full"><label class="check" style="align-items:flex-start"><input type="checkbox" name="rules" required style="margin-top:5px"><span>اطلاعات واردشده صحیح است و می‌دانم این فرم صرفاً <b>درخواست رزرو</b> ثبت می‌کند؛ رزرو پس از تأیید بنیاد قطعی خواهد شد. <span class="req">*</span></span></label></div>
+</div><div style="height:16px"></div><div class="summary"><h4>📋 خلاصه درخواست</h4><div class="sumrow"><span>سالن انتخابی</span><b id="sumVenue">—</b></div><div class="sumrow"><span>تاریخ</span><b id="sumDate">—</b></div><div class="sumrow"><span>بازه زمانی</span><b id="sumSlot">—</b></div><div class="sumrow"><span>ظرفیت سالن</span><b id="sumCap">—</b></div></div><p class="notice">ثبت درخواست به معنی تأیید نهایی، رزرو قطعی یا تعیین هزینه نیست. کارشناسان بنیاد پس از بررسی با متقاضی تماس می‌گیرند.</p><button class="btn" type="submit">ثبت درخواست رزرو ←</button><div class="secure">🔒 اطلاعات فقط برای بررسی درخواست استفاده می‌شود.</div><div class="success" id="success"></div></form></div></div>
+<div class="panel"><div class="ph"><h3>☎️ راهنمای درخواست</h3></div><div class="pb"><p style="margin-top:0">برای درخواست‌های چندروزه، تغییر زمان یا خدمات خاص، توضیحات را کامل بنویسید تا کارشناسان مربوطه بررسی کنند.</p><div class="sumrow"><span>وضعیت درخواست</span><b>در انتظار بررسی</b></div><div class="sumrow"><span>تأیید نهایی</span><b>توسط بنیاد</b></div><p class="hint">نسخه نمایشی: برای اتصال واقعی به Google Sheets باید اسکریپت سمت سرور نصب و منتشر شود. تقویم فعلی اطلاعات نمونه دارد و به فایل شما متصل نیست.</p></div></div>
+</aside></div><div class="foot">بنیاد فرهنگی رضوی · سامانه درخواست رزرو سالن‌ها · نسخه نمایشی طراحی رابط کاربری</div></div></main>
+<script>
+const venues=[...document.querySelectorAll('input[name="venue"]')];
+const slotsData=[{label:'نوبت اول',time:'۰۷:۰۰ تا ۱۱:۰۰',start:7,end:11},{label:'نوبت دوم',time:'۱۱:۰۰ تا ۱۵:۰۰',start:11,end:15},{label:'نوبت سوم',time:'۱۵:۰۰ تا ۱۹:۰۰',start:15,end:19}];
+let view=new Date();view.setDate(1);let chosen=null,chosenSlot=null;const bookedDemo=new Set();
+function jalali(gDate){const f=new Intl.DateTimeFormat('fa-IR-u-ca-persian-nu-latn',{year:'numeric',month:'numeric',day:'numeric'});let p={};f.formatToParts(gDate).forEach(x=>{if(x.type!=='literal')p[x.type]=x.value});return {y:+p.year,m:+p.month,d:+p.day,txt:`${p.year}/${String(p.month).padStart(2,'0')}/${String(p.day).padStart(2,'0')}`}}
+function fa(n){return String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])}function key(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function monthTitle(d){return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long'}).format(d)}
+function renderCalendar(){document.getElementById('monthName').textContent=monthTitle(view);const box=document.getElementById('days');box.innerHTML='';let first=new Date(view.getFullYear(),view.getMonth(),1);let offset=(first.getDay()+1)%7;let start=new Date(first);start.setDate(first.getDate()-offset);const today=new Date();today.setHours(0,0,0,0);for(let i=0;i<42;i++){let d=new Date(start);d.setDate(start.getDate()+i);let b=document.createElement('button');b.type='button';b.className='day'+(d.getMonth()!==view.getMonth()?' muted':'');b.textContent=fa(jalali(d).d);b.disabled=d<today;b.title=jalali(d).txt;if(chosen&&key(chosen)===key(d))b.classList.add('selected');if(!b.disabled&&d.getDay()!==5){let dot=document.createElement('i');dot.className='dot';b.append(dot)}if(!b.disabled)b.onclick=()=>{chosen=d;chosenSlot=null;renderCalendar();renderSlots();updateSummary()};box.append(b)} }
+function renderSlots(){const box=document.getElementById('slots');box.innerHTML='';slotsData.forEach((s,i)=>{let occupied=bookedDemo.has(key(chosen)+'|'+venueNow()+'|'+i);let label=document.createElement('label');label.className='slot';label.innerHTML=`<span class="slotleft"><span class="clock">◷</span><span><b>${s.label}</b><small>${s.time}</small></span></span><span style="display:flex;align-items:center;gap:8px"><span class="status ${occupied?'busy':''}">${occupied?'تکمیل شده':'قابل درخواست'}</span><input type="radio" name="slot" ${occupied?'disabled':''} ${chosenSlot===i?'checked':''} aria-label="${s.label}"></span>`;let radio=label.querySelector('input');radio.onchange=()=>{chosenSlot=i;updateSummary()};label.onclick=(e)=>{if(!occupied&&e.target.tagName!=='INPUT'){radio.checked=true;chosenSlot=i;updateSummary()}};box.append(label)})}
+function venueNow(){return document.querySelector('input[name="venue"]:checked')?.value||''}function updateSummary(){let v=venues.find(x=>x.checked);document.getElementById('sumVenue').textContent=v?v.value:'—';document.getElementById('sumCap').textContent=v?fa(v.dataset.cap)+' نفر':'—';document.getElementById('sumDate').textContent=chosen?jalali(chosen).txt:'—';document.getElementById('selectedDateLabel').textContent=chosen?jalali(chosen).txt:'تاریخی انتخاب نشده';document.getElementById('sumSlot').textContent=chosenSlot!==null?slotsData[chosenSlot].time:'—'}
+document.getElementById('prevMonth').onclick=()=>{view.setMonth(view.getMonth()-1);renderCalendar()};document.getElementById('nextMonth').onclick=()=>{view.setMonth(view.getMonth()+1);renderCalendar()};venues.forEach(v=>v.addEventListener('change',()=>{chosenSlot=null;renderSlots();updateSummary();const services=document.getElementById('servicePanel');services.style.display=v.dataset.type==='همایش'&&v.value===venues[0].value?'block':'block'}));
+const now=new Date();chosen=new Date(now);chosen.setDate(chosen.getDate()+1);while(chosen.getDay()===5)chosen.setDate(chosen.getDate()+1);view=new Date(chosen.getFullYear(),chosen.getMonth(),1);renderCalendar();renderSlots();updateSummary();
+document.getElementById('reservationForm').addEventListener('submit',e=>{e.preventDefault();if(!chosen||chosenSlot===null){alert('لطفاً تاریخ و بازه زمانی را انتخاب کنید.');return}const v=venues.find(x=>x.checked);const attendees=+e.target.elements.attendees.value;if(attendees>+v.dataset.cap){alert('تعداد شرکت‌کنندگان از ظرفیت اعلام‌شده این سالن بیشتر است.');return}const fd=new FormData(e.target);const code='RZ-'+Math.random().toString(36).slice(2,7).toUpperCase();const msg=`درخواست نمایشی شما با کد ${code} ثبت شد. در نسخه فعلی اطلاعات فقط در همین پیش‌نمایش نمایش داده می‌شود و به Google Sheets ارسال نشده است. برای ثبت واقعی، نسخه متصل به Apps Script باید منتشر شود.`;const success=document.getElementById('success');success.style.display='block';success.textContent=msg;success.scrollIntoView({behavior:'smooth',block:'nearest'});});
+</script>
+<script>
+// اتصال نسخه نمایشی به Google Apps Script
+const RESERVATION_API_URL='https://script.google.com/macros/s/AKfycbxsu4CjHNei2UaVYswBt_o855pHNIYCT-mURKD22awbP97Tl47cFS8D7MEWDUJznETa/exec';
+const connectionBadge=document.querySelector('.demo');
+const originalHint=document.querySelector('#selectedDateLabel');
+function isoDateLocal(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function showApiState(text){if(connectionBadge)connectionBadge.textContent=text}
+async function refreshReservations(){
+  try{
+    const response=await fetch(RESERVATION_API_URL,{method:'GET',cache:'no-store'});
+    if(!response.ok)throw new Error('HTTP '+response.status);
+    const data=await response.json();
+    if(data.ok===false)throw new Error(data.message||'API error');
+    const rows=Array.isArray(data)?data:(data.reservations||data.data||[]);
+    bookedDemo.clear();
+    rows.forEach(r=>{
+      const status=String(r.status||'').trim();
+      if(/رد شده|لغو شده|rejected|cancelled|canceled/i.test(status))return;
+      if(!r.date||!r.venue||r.slotIndex===undefined||r.slotIndex===null)return;
+      const parts=String(r.date).slice(0,10).split('-').map(Number);
+      if(parts.length!==3||!parts.every(Number.isFinite))return;
+      const d=new Date(parts[0],parts[1]-1,parts[2]);
+      bookedDemo.add(key(d)+'|'+r.venue+'|'+Number(r.slotIndex));
+    });
+    renderSlots();
+    showApiState('تقویم به‌روز شد');
+    const help=document.querySelector('.panel .hint');
+    if(help&&help.textContent.includes('تقویم فعلی اطلاعات نمونه دارد'))help.textContent='وضعیت بازه‌ها از اطلاعات دریافتی سامانه خوانده می‌شود؛ درخواست تا تأیید کارشناسان بنیاد قطعی نیست.';
+  }catch(err){
+    showApiState('بررسی اتصال ناموفق');
+    console.error('Reservation calendar connection failed:',err);
+  }
+}
+// این listener در مرحله capture اجرا می‌شود تا ارسال نمایشی قبلی را متوقف کند.
+document.getElementById('reservationForm').addEventListener('submit',async function(e){
+  e.preventDefault();e.stopImmediatePropagation();
+  const form=e.currentTarget;
+  if(!form.reportValidity())return;
+  if(!chosen||chosenSlot===null){alert('لطفاً تاریخ و بازه زمانی را انتخاب کنید.');return;}
+  const venue=venues.find(x=>x.checked);
+  const attendees=Number(form.elements.attendees.value);
+  if(attendees>Number(venue.dataset.cap)){alert('تعداد شرکت‌کنندگان از ظرفیت اعلام‌شده این سالن بیشتر است.');return;}
+  const fd=new FormData(form);const slot=slotsData[chosenSlot];
+  const payload={action:'reserve',date:isoDateLocal(chosen),venue:venue.value,venueType:venue.dataset.type,capacity:Number(venue.dataset.cap),slotIndex:chosenSlot,startTime:String(slot.start).padStart(2,'0')+':00',endTime:String(slot.end).padStart(2,'0')+':00',applicantType:fd.get('applicantType'),organization:fd.get('organization'),fullName:fd.get('fullName'),phone:fd.get('phone'),nationalId:fd.get('nationalId'),email:fd.get('email'),eventTitle:fd.get('eventTitle'),eventType:fd.get('eventType'),attendees:attendees,backupDate:fd.get('backupDate'),technicalContact:fd.get('technicalContact'),payment:fd.get('payment'),services:fd.getAll('service'),notes:fd.get('notes')};
+  const btn=form.querySelector('button[type="submit"]');const success=document.getElementById('success');btn.disabled=true;btn.textContent='در حال ارسال درخواست…';success.style.display='none';
+  try{
+    const response=await fetch(RESERVATION_API_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+    if(!response.ok)throw new Error('HTTP '+response.status);
+    const result=await response.json();
+    if(result.ok===false||result.success===false)throw new Error(result.message||result.error||'درخواست ثبت نشد');
+    const code=result.code||result.trackingCode||result.requestCode||'ثبت‌شده';
+    success.textContent='درخواست به سامانه ارسال شد. کد پیگیری: '+code+' — وضعیت: در انتظار بررسی کارشناسان بنیاد.';
+    success.style.display='block';success.scrollIntoView({behavior:'smooth',block:'nearest'});
+    await refreshReservations();
+  }catch(err){
+    console.error('Reservation submission failed:',err);
+    success.textContent='پاسخ قابل تأیید از سامانه دریافت نشد؛ بنابراین ثبت درخواست را قطعی تلقی نکنید. ممکن است دسترسی مرورگر یا تنظیمات انتشار Apps Script مانع ارتباط شده باشد. لطفاً اتصال و دسترسی Web app بررسی شود.';
+    success.style.display='block';success.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }finally{btn.disabled=false;btn.textContent='ثبت درخواست رزرو ←';}
+},true);
+refreshReservations();
+</script><script>
+// نمایش راهنمای واضح در کلیک، حتی اگر اعتبارسنجی مرورگر مانع ارسال فرم شود.
+(()=>{
+  const form=document.getElementById('reservationForm');
+  const btn=form?.querySelector('button[type="submit"]');
+  const box=document.getElementById('success');
+  if(!form||!btn||!box)return;
+  btn.addEventListener('click',()=>{
+    if(!form.checkValidity()){
+      box.style.display='block';
+      box.textContent='لطفاً فیلدهای ستاره‌دار را کامل کنید و تیک تأیید اطلاعات را بزنید.';
+      box.scrollIntoView({behavior:'smooth',block:'nearest'});
+      form.reportValidity();
+      return;
+    }
+    if(!chosen||chosenSlot===null){
+      box.style.display='block';
+      box.textContent='لطفاً ابتدا یک تاریخ و سپس یکی از بازه‌های زمانی را انتخاب کنید.';
+      box.scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
+  });
+})();
+</script><script>
+// واکنش فوری دکمه ثبت؛ در مرحله capture تا قبل از اعتبارسنجی مرورگر اجرا می‌شود.
+document.addEventListener('click',function(e){
+  const button=e.target.closest('#reservationForm button[type="submit"]');
+  if(!button)return;
+  const form=document.getElementById('reservationForm');
+  const box=document.getElementById('success');
+  if(!form||!box)return;
+  if(!form.checkValidity()){
+    box.style.display='block';
+    box.textContent='برای ادامه، فیلدهای ستاره‌دار را کامل کنید و تیک تأیید اطلاعات را بزنید.';
+    form.reportValidity();
+    box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }else if(!chosen||chosenSlot===null){
+    box.style.display='block';
+    box.textContent='اطلاعات فرم کامل است؛ حالا در تقویم یک تاریخ و سپس یک بازه زمانی انتخاب کنید.';
+    box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }else{
+    box.style.display='block';
+    box.textContent='درخواست در حال بررسی و ارسال است… اگر این پیام باقی ماند، نسخه پیش‌نمایش امکان اتصال مستقیم به سامانه را ندارد.';
+  }
+},true);
+</script></body></html>
